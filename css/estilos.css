@@ -1,0 +1,1862 @@
+/* =================== Estilos Globales =================== */
+
+/* Restablece márgenes y paddings, establece la fuente predeterminada */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Estilo general del cuerpo */
+body {
+overflow-x: hidden; /* Elimina la barra de desplazamiento horizontal */
+background-color: #ffffff; /* Color de fondo blanco */
+}
+
+/* Estilo para listas sin viñetas */
+ul {
+list-style: none;
+margin: 0;
+}
+
+/* Estilo para encabezados h2 */
+h2 {
+  font-size: 3rem; /* Tamaño de fuente grande y legible */
+  font-weight: 600; /* Peso de fuente seminegrita */
+  color: #333; /* Color oscuro para buen contraste */
+  margin-bottom: 0.5rem; /* Espacio debajo del título */
+  padding-bottom: 0.25rem; /* Espacio adicional para el texto */
+  text-transform: uppercase; /* Mayúsculas para un estilo más formal */
+  letter-spacing: 0.5px; /* Espaciado entre letras */
+  margin-left: 170px; /* Margen izquierdo */
+}
+
+/* Ajuste de estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  h2 {
+      font-size: 2rem; /* Tamaño de fuente reducido en pantallas más pequeñas */
+      text-align: center; /* Centra el texto del título en pantallas pequeñas */
+      margin: 0; /* Ajusta márgenes para el centrado en pantallas pequeñas */
+  }
+}
+
+/* Estilo para párrafos */
+p {
+color: #7a7a7a;
+font-size: 14px;
+line-height: 24px;
+
+}
+
+/* Estilo para el contenido de parallax */
+.parallax-content {
+width: 100%;
+min-height: 100vh; /* Altura mínima igual a la altura de la ventana */
+background-size: cover; /* Ajusta el tamaño del fondo para cubrir el área */
+}
+
+/* Estilo para encabezados h3 */
+
+h3{
+  margin-bottom: 15px;
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 2.75rem;
+  line-height: 1.2;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+/* Estilo para botones primarios */
+.primary-white-button a,
+.primary-blue-button a {
+display: inline-block;
+font-size: 13px;
+padding: 12px 18px;
+font-weight: 500;
+letter-spacing: 1px;
+text-transform: uppercase;
+text-decoration: none;
+border-radius: 20px;
+}
+
+/* Botón con fondo blanco */
+.primary-white-button a {
+background-color: #fff;
+color: #121212;
+}
+
+/* Botón con fondo azul */
+.primary-blue-button a {
+background-color: #33c1cf;
+color: #fff;
+}
+
+/* Estilo para botones emergentes */
+.pop-button h4 {
+display: inline-block;
+background-color: #33c1cf;
+font-size: 13px!important;
+padding: 12px 18px;
+color: #fff;
+font-weight: 400!important;
+letter-spacing: 1px;
+text-transform: uppercase;
+text-decoration: none;
+border-radius: 20px;
+cursor: pointer;
+}
+
+/* =================== Estilos del Encabezado =================== */
+
+/* Estilo del encabezado fijo */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  z-index: 10000;
+  transition: all 0.2s ease-in-out;
+  height: 80px;
+  background-color: transparent;
+  text-align: center;
+  line-height: 80px; /* Ajusta la altura de línea para centrar el texto verticalmente */
+}
+
+/* Estilo para la marca del navbar */
+.navbar-brand {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+/* Estilo para el logo en el navbar */
+.navbar-brand em {
+  font-style: normal;
+  color: #f7c552;
+  font-size: 32px;
+}
+
+/* Estilo para el menú del navbar */
+.navbar-nav>li>a {
+  color: #ffffff!important;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 80px; /* Ajusta la altura del menú */
+  padding: 0 15px; /* Ajusta el padding horizontal según sea necesario */
+}
+/* Estilos para pantallas responsivas */
+@media (max-width: 768px) {
+  .navbar-nav>li>a {
+    color: #419BAF !important; /* Cambia el color cuando sea responsivo */
+  }
+}
+/* Cambios de estilo cuando el encabezado tiene la clase 'active' */
+.header.active {
+  background-color: rgba(250, 250, 250, 0.98);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.header.active .navbar-nav>li>a,
+.header.active .navbar-brand {
+  color: #000000 !important;
+}
+
+.header.active .navbar-brand em {
+  color: #000000 !important;
+}
+
+/* Estilo del logo en el encabezado */
+.logo-wrapper {
+  float: left;
+  margin-right: 15px;
+}
+
+.logo {
+  max-height: 60px;
+  width: auto;
+  transition: all 0.3s;
+}
+
+.navbar-brand {
+  font-weight: 800;
+}
+
+/* Estilo del navbar cuando está en estado normal */
+.navbar-inverse {
+  background-image: none;
+  background-color: transparent;
+  padding: 10px 0;
+  margin: 0;
+}
+
+/* Estilo de la imagen del logo en el navbar */
+.navbar-brand img {
+  max-height: 60px;
+  width: auto;
+  transition: all 0.3s;
+}
+
+/* Estilo del navbar */
+.header .navbar {
+  margin: 0;
+  border: none;
+}
+
+/* Estilo para las secciones de página */
+.page-section {
+  padding: 80px 0;
+}
+
+/* Estilo del toggle del navbar en dispositivos móviles */
+.navbar-inverse .navbar-toggle {
+  border-color: #f7c552;
+  background-color: #f7c552;
+}
+
+/* Estilo del toggle al pasar el ratón */
+.navbar-inverse .navbar-toggle:hover, 
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #f7c552;
+}
+
+/* =================== Estilos para el Menú Desplegable =================== */
+
+/* Estilo del menú desplegable por defecto */
+.navbar-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 10000;
+}
+
+/* Estilo para los elementos de lista en el menú desplegable */
+.navbar-nav .dropdown-menu>li {
+  display: block;
+}
+
+/* Estilo para los enlaces en el menú desplegable */
+.navbar-nav .dropdown-menu>li>a {
+  display: block;
+  padding: 10px 15px;
+  color: #121212;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo del enlace al pasar el ratón */
+.navbar-nav .dropdown-menu>li>a:hover {
+  background-color: #419BAF;
+  color: #fff;
+}
+
+/* Mostrar el menú desplegable al pasar el ratón */
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* =================== Estilos del Menú en Dispositivos Móviles =================== */
+
+@media (max-width: 768px) {
+  /* Estilo del menú desplegable */
+  .navbar-collapse {
+    background-color: #ffffff; /* Fondo blanco */
+    border: none; /* Sin borde */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    padding: 15px; /* Espaciado interno */
+    max-height: calc(100vh - 60px); /* Altura máxima */
+    overflow-y: auto; /* Desplazamiento vertical si es necesario */
+    transition: max-height 0.3s ease; /* Transición suave para altura */
+    position: absolute; /* Posición absoluta para el menú desplegable */
+    top: 100%; /* Posiciona el menú justo debajo del encabezado */
+    left: 0;
+    width: 100%; /* Ancho completo del menú */
+  }
+
+  /* Alineación y estilo de los elementos del menú */
+  .navbar-nav {
+    display: flex; /* Flexbox para distribución */
+    flex-direction: column; /* Elementos en columna */
+    align-items: flex-start; /* Alinear al inicio */
+    padding-left: 0; /* Sin padding izquierdo */
+  }
+
+  .navbar-nav>li {
+    width: 100%; /* Ocupa todo el ancho */
+    margin: 5px 0; /* Espaciado vertical reducido */
+  }
+
+  .navbar-nav>li>a {
+    display: block; /* Ocupa todo el espacio */
+    padding: 12px 20px; /* Espaciado interno ajustado */
+    font-size: 16px; /* Tamaño de fuente adecuado para móviles */
+    font-weight: 500; /* Peso de fuente más visible */
+    color: #333; /* Color del texto */
+    text-align: left; /* Alineación a la izquierda */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+  }
+
+  .navbar-nav>li>a:hover,
+  .navbar-nav>li>a:focus {
+    background-color: #f7c552; /* Fondo al pasar el ratón */
+    color: #fff; /* Color del texto al pasar el ratón */
+  }
+}
+
+/* =================== Sección Sobre Nosotros =================== */
+
+#about {
+	padding: 150px 0;
+	background-image: url(https://uni.edu.gt/wp-content/uploads/sites/19/2024/03/Que-son-los-Sistemas-de-Gestion-Empresarial-y-sus-beneficios.jpg); /* Imagen de fondo */
+	background-repeat: no-repeat; /* Evita la repetición de la imagen */
+	background-size: cover; /* Cubre toda el área del elemento */
+	background-attachment: fixed; /* Fija la imagen de fondo */
+}
+
+#about .service-item {
+	text-align: center; /* Centra el contenido dentro de cada ítem */
+}
+
+#about .service-item .icon {
+	width: 110px;
+	height: 110px;
+	display: inline-block;
+	text-align: center;
+	line-height: 104px; /* Alinea verticalmente el icono */
+}
+
+#about .service-item h4 {
+	margin-bottom: 30px;
+	margin-top: 45px;
+	font-size: 17px;
+	font-weight: 500;
+	color: #fff; /* Color del texto blanco */
+	letter-spacing: 1px;
+}
+
+#about .service-item .line-dec {
+	width: 100%;
+	height: 1px;
+	background-color: rgba(250, 250, 250, 0.5); /* Línea de separación con opacidad */
+}
+
+#about .service-item p {
+	color: #fff; /* Color del texto blanco */
+	margin-top: 30px;
+}
+
+#about .service-item .primary-blue-button {
+	margin-top: 35px; /* Margen superior para el botón */
+}
+
+/* Diseño de la cuadrícula para el contenido de 'about' */
+#about .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las columnas */
+}
+
+#about .col-md-3 {
+    flex: 0 0 calc(25% - 20px); /* Ancho de cada columna con margen */
+    margin: 10px; /* Ajusta el margen entre columnas */
+}
+
+/* Ajuste en la visualización para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #about .col-md-3 {
+        flex: 0 0 calc(50% - 20px); /* Cambia a dos columnas en dispositivos móviles */
+    }
+}
+
+/* =================== Sección de Proyectos =================== */
+
+.projects-holder {
+	padding: 30px 15px 0 15px; /* Espaciado en la sección de proyectos */
+}
+
+.projects-holder .mix {
+  display: none; /* Oculta los elementos de proyecto por defecto */
+}
+
+.filter-categories {
+  margin-top: 60px; /* Margen superior para la sección de filtros */
+}
+
+.filter-categories ul li {
+  margin: 0 10px 15px 0; /* Margen alrededor de los elementos de filtro */
+  display: block;
+}
+
+.filter-categories ul li span {
+  cursor: pointer; /* Cambia el cursor al pasar sobre los elementos */
+  color: #fff; /* Color del texto blanco */
+  display: inline-block;
+  font-size: 15px;
+  text-transform: capitalize; /* Capitaliza la primera letra de cada palabra */
+  font-weight: 500;
+}
+
+.filter-categories ul li.active span {
+  color: #f7c552; /* Color del texto para el filtro activo */
+}
+
+#portfolio .page-section {
+	padding: 0; /* Elimina el padding en la sección de portafolio */
+}
+
+#portfolio .section-heading {
+	padding-top: 200px;
+	padding-bottom: 200px;
+	background-color: #33c1cf; /* Color de fondo de la sección */
+	height: 732px;
+	margin-left: -100vh; /* Ajusta el margen izquierdo */
+	padding-left: 100vh; /* Ajusta el padding izquierdo */
+}
+
+#portfolio .project-item {
+	margin: 0 -16px; /* Ajusta el margen de los elementos de proyecto */
+}
+
+#portfolio .section-heading h4 {
+	margin-top: 0;
+	font-size: 20px;
+	text-transform: uppercase; /* Mayúsculas */
+	font-weight: 700; /* Peso de fuente negrita */
+	color: #fff; /* Color del texto blanco */
+	letter-spacing: 1px;
+}
+
+#portfolio .section-heading .line-dec {
+	width: 270px;
+	height: 1px;
+	background-color: rgba(250, 250, 250, 0.5); /* Línea de separación con opacidad */
+	margin: 20px 0 15px;
+}
+
+#portfolio .section-heading p {
+	color: #fff; /* Color del texto blanco */
+	padding-right: 70px; /* Padding derecho */
+}
+
+/* =================== Sección de Testimonios =================== */
+
+#testimonial {
+	background-color: #419BAF; /* Color de fondo azul */
+	text-align: center; /* Centra el texto */
+	padding: 100px 0; /* Espaciado vertical en la sección de testimonios */
+}
+
+#testimonial .testimonials-item h4 {
+	color: #fff; /* Color del texto blanco */
+	font-size: 17px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	margin-top: 30px;
+	margin-bottom: 5px;
+}
+
+#testimonial .testimonials-item span {
+	font-size: 13px;
+	color: #fff; /* Color del texto blanco */
+	letter-spacing: 0.5px;
+}
+
+#testimonial .testimonials-item p {
+	font-size: 16px;
+	color: #9a9a9a; /* Color del texto gris */
+	font-style: italic; /* Estilo cursiva */
+	font-weight: 300;
+	background-color: #fff; /* Fondo blanco para el texto */
+	padding: 30px; /* Espaciado interno */
+	border-radius: 5px; /* Bordes redondeados */
+}
+
+/* =================== Paginación de Owl Carousel =================== */
+
+.owl-pagination {
+  margin-top: 20px;
+  opacity: 1;
+  display: inline-block;
+}
+
+.owl-page span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  filter: alpha(opacity=50); /* Filtro de opacidad para IE */
+  opacity: 0.5;
+  -webkit-border-radius: 20px; /* Bordes redondeados para WebKit */
+  -moz-border-radius: 20px; /* Bordes redondeados para Mozilla */
+  border-radius: 20px; /* Bordes redondeados */
+  background: #fff; /* Color de fondo blanco */
+}
+/* =================== Sección del Blog =================== */
+
+#blog {
+	background-image: url(https://blog.movistar.com.co/wp-content/uploads/2024/05/Telefonia-IP.webp); /* Imagen de fondo */
+	background-repeat: no-repeat; /* Evita la repetición de la imagen */
+	background-size: cover; /* Cubre toda el área del elemento */
+	background-attachment: fixed; /* Fija la imagen de fondo */
+}
+
+#blog .section-heading {
+	text-align: left; /* Alinea el texto a la izquierda */
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+	height: 582px; /* Altura de la sección */
+	margin-left: -100vh; /* Ajusta el margen izquierdo */
+	padding-left: 100vh; /* Ajusta el padding izquierdo */
+	overflow: hidden!important; /* Oculta el desbordamiento */
+}
+
+#blog .section-heading h4 {
+	margin-top: 0;
+	font-size: 20px;
+	text-transform: uppercase; /* Mayúsculas */
+	font-weight: 700; /* Peso de fuente negrita */
+	color: #fff; /* Color del texto blanco */
+	letter-spacing: 1px;
+}
+
+#blog .section-heading .line-dec {
+	width: 270px;
+	height: 1px;
+	background-color: rgba(250, 250, 250, 0.5); /* Línea de separación con opacidad */
+	margin: 20px 0 15px;
+}
+
+#blog .section-heading p {
+	color: #fff; /* Color del texto blanco */
+	padding-right: 70px; /* Padding derecho */
+}
+
+/* =================== Pestañas =================== */
+
+.wrapper {
+  text-align: center; /* Centra el contenido de la clase wrapper */
+}
+
+.tabs {
+  list-style: none; /* Elimina las viñetas */
+  margin-top: 40px; /* Margen superior */
+  padding-right: 70px; /* Padding derecho */
+}
+
+.tabs li {
+  display: block; /* Hace que los elementos se muestren en bloque */
+  text-align: center; /* Centra el texto dentro de cada elemento */
+  margin: 25px 0; /* Margen superior e inferior */
+}
+
+.tabs a {
+  display: block; /* Hace que el enlace ocupe todo el espacio del elemento li */
+  text-align: center; /* Centra el texto del enlace */
+  text-decoration: none; /* Sin subrayado en el enlace */
+  text-transform: capitalize; /* Capitaliza la primera letra de cada palabra */
+  letter-spacing: 0.5px;
+  color: #121212; /* Color del texto */
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 12px; /* Espaciado interno */
+  background-color: #fff; /* Fondo blanco para los enlaces */
+}
+
+.tabs a:hover {
+  color: #f7c552; /* Color del texto al pasar el ratón */
+}
+
+.tabs .active {
+  color: #f7c552; /* Color del texto para la pestaña activa */
+}
+
+/* =================== Contenido de las Pestañas =================== */
+
+#first-tab-group {
+	margin-top: 30px;
+	margin-bottom: 15px; /* Margen superior e inferior para el primer grupo de pestañas */
+}
+
+.tabgroup .text-content {
+  background-color: #fff; /* Fondo blanco para el contenido de las pestañas */
+  color: #121212; /* Color del texto */
+  padding: 25px; /* Espaciado interno */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.tabgroup .text-content h4 {
+	font-size: 17px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	color: #121212; /* Color del texto */
+	margin-top: 0;
+	margin-bottom: 5px; /* Margen inferior */
+}
+
+.tabgroup .text-content span {
+	font-size: 13px;
+	color: #33c1cf; /* Color del texto azul */
+}
+
+.tabgroup .text-content a {
+	font-size: 13px;
+	color: #33c1cf; /* Color del texto azul */
+	text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+.tabgroup .text-content p {
+	margin-top: 10px; /* Margen superior */
+}
+
+/* =================== Clearfix =================== */
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; /* Limpia los flotantes */
+}
+/* =================== Sección de Contacto =================== */
+
+#contact-us {
+	background-color: #419BAF; /* Color de fondo */
+	text-align: center; /* Centra el texto */
+	padding: 80px 0; /* Espaciado vertical */
+}
+
+#contact-us .section-heading h4 {
+	margin-top: 0;
+	font-size: 20px;
+	text-transform: uppercase; /* Mayúsculas */
+	font-weight: 700; /* Peso de fuente negrita */
+	color: #fff; /* Color del texto blanco */
+	letter-spacing: 1px;
+}
+
+#contact-us .section-heading .line-dec {
+	width: 270px;
+	height: 1px;
+	background-color: rgba(250, 250, 250, 0.5); /* Línea de separación con opacidad */
+	margin: 20px auto 15px auto; /* Centra la línea */
+}
+
+#contact-us .section-heading p {
+	color: #fff; /* Color del texto blanco */
+	padding: 0px 33%; /* Padding horizontal */
+}
+
+#contact-us .pop-button {
+	margin-top: 30px;
+}
+
+/* Estilos para los campos del formulario de contacto */
+#contact input,
+#contact textarea {
+	border-radius: 0; /* Sin bordes redondeados */
+	padding-left: 15px; /* Padding izquierdo */
+	font-size: 13px;
+	color: #232323; /* Color del texto */
+	background-color: rgba(250, 250, 250, 1); /* Fondo blanco */
+	outline: none; /* Sin contorno */
+	border: none; /* Sin borde */
+	box-shadow: none; /* Sin sombra */
+}
+
+#contact input {
+	line-height: 50px;
+	height: 40px;
+	width: 100%;
+	margin-bottom: 10px; /* Margen inferior */
+}
+
+#contact textarea {
+	padding-top: 10px; /* Padding superior */
+	height: 165px;
+	max-height: 110px; /* Altura máxima */
+	width: 100%;
+	margin-bottom: 25px; /* Margen inferior */
+}
+
+/* Estilo para el botón de enviar */
+#contact button {
+	display: inline-block;
+	background-color: #f7c552; /* Color de fondo del botón */
+	font-size: 13px;
+	padding: 12px 18px; /* Espaciado interno */
+	color: #fff; /* Color del texto blanco */
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-transform: uppercase; /* Mayúsculas */
+	text-decoration: none; /* Sin subrayado */
+	border-radius: 20px; /* Bordes redondeados */
+}
+
+/* Estilos para el popup */
+.pop #contact {
+	z-index: 99999; /* Nivel de apilamiento */
+	position: fixed; /* Posición fija */
+	top: 25%;
+	left: 20%;
+	right: 20%;
+}
+
+.pop {
+	z-index: 99999; /* Nivel de apilamiento */
+	text-align: center; /* Centra el texto */
+	padding: 30px; /* Espaciado interno */
+	display: none; /* Oculto por defecto */
+	position: fixed; /* Posición fija */
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 100%; /* Altura completa */
+	background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro con opacidad */
+	box-shadow: 0px 0px 15px; /* Sombra */
+}
+
+.pop span {
+	z-index: 999; /* Nivel de apilamiento */
+	position: relative; /* Posición relativa */
+	margin-bottom: 20px; /* Margen inferior */
+	cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
+	width: 44px;
+	height: 44px;
+	display: inline-block; /* Muestra el elemento en línea */
+	line-height: 44px; /* Altura de la línea */
+	color: #fff; /* Color del texto blanco */
+	text-align: center; /* Centra el texto */
+	background-color: #33c1cf; /* Fondo azul */
+}
+
+.pop span:hover {
+	background-color: #596065; /* Fondo gris al pasar el ratón */
+	transition: all 0.5s; /* Transición suave */
+}
+
+/* =================== Estilos Responsivos =================== */
+
+@media (max-width: 991px) {
+	.baner-content .text-content p {
+		padding: 0px 15%; /* Ajusta el padding horizontal */
+	}
+
+	#about .service-item {
+		margin-bottom: 80px; /* Ajusta el margen inferior */
+	}
+
+	#portfolio .section-heading {
+		text-align: center; /* Centra el texto */
+		padding-top: 100px;
+		padding-bottom: 100px;
+		background-color: #2C7180; /* Color de fondo */
+		height: 505px; /* Altura */
+		margin-left: -15px; /* Ajusta los márgenes */
+		padding-left: 0;
+		margin-right: -15px;
+		padding-right: 0;
+		overflow: hidden; /* Oculta el desbordamiento */
+	}
+
+	#portfolio .section-heading .line-dec {
+		margin: 20px auto 15px auto; /* Centra la línea */
+	}
+
+	#portfolio .section-heading p {
+		padding: 0px 20px; /* Ajusta el padding horizontal */
+	}
+
+	.projects-holder {
+		text-align: center; /* Centra el texto */
+		padding: 15px 0; /* Espaciado vertical */
+	}
+
+	#portfolio .project-item {
+		margin: 15px 0; /* Ajusta el margen */
+	}
+
+	#blog .section-heading {
+		text-align: center; /* Centra el texto */
+		padding-top: 100px;
+		padding-bottom: 100px;
+		background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+		margin-left: -15px; /* Ajusta los márgenes */
+		padding-left: 0;
+		margin-right: -15px;
+		padding-right: 0;
+		overflow: hidden!important; /* Oculta el desbordamiento */
+	}
+
+	#blog .section-heading .line-dec {
+		margin: 20px auto 15px auto; /* Centra la línea */
+	}
+
+	#blog .section-heading p {
+		padding: 0px 30px; /* Ajusta el padding horizontal */
+	}
+
+	.tabs {
+		padding: 0px 45px; /* Ajusta el padding horizontal */
+	}
+
+	#first-tab-group {
+		margin-bottom: 30px; /* Ajusta el margen inferior */
+	}
+
+	#contact-us .section-heading p {
+		padding: 0px 10%; /* Ajusta el padding horizontal */
+	}
+}
+
+/*** Section Title ***/
+.section-title {
+  /* Establece la posición relativa para posicionar los elementos ::before y ::after */
+  position: relative;
+  /* Se muestra como bloque en línea y el texto se transforma a mayúsculas */
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.section-title::before {
+  /* Crea una línea decorativa antes del contenido del título */
+  position: absolute;
+  content: "";
+  /* Ancho extendido más allá del contenido del título */
+  width: calc(100% + 80px);
+  /* Grosor de la línea */
+  height: 2px;
+  /* Posicionada a 4px del borde superior del contenedor */
+  top: 4px;
+  /* Posicionada 40px a la izquierda del borde del contenedor */
+  left: -40px;
+  /* Color de la línea */
+  background: var(--primary);
+  /* Asegura que la línea esté detrás del texto */
+  z-index: -1;
+}
+
+.section-title::after {
+  /* Crea una línea decorativa después del contenido del título */
+  position: absolute;
+  content: "";
+  /* Ancho extendido más allá del contenido del título */
+  width: calc(100% + 120px);
+  /* Grosor de la línea */
+  height: 2px;
+  /* Posicionada a 5px del borde inferior del contenedor */
+  bottom: 5px;
+  /* Posicionada 60px a la izquierda del borde del contenedor */
+  left: -60px;
+  /* Color de la línea */
+  background: var(--primary);
+  /* Asegura que la línea esté detrás del texto */
+  z-index: -1;
+}
+
+.section-title.text-start::before {
+  /* Ajusta el ancho y la posición de la línea decorativa antes del contenido del título cuando se aplica text-start */
+  width: calc(100% + 40px);
+  left: 0;
+}
+
+.section-title.text-start::after {
+  /* Ajusta el ancho y la posición de la línea decorativa después del contenido del título cuando se aplica text-start */
+  width: calc(100% + 60px);
+  left: 0;
+}
+
+
+/*** Service ***/
+.service-item {
+  /* Define el fondo del elemento y agrega una transición suave de 0.5 segundos */
+  background: var(--light);
+  transition: .5s;
+}
+
+.service-item:hover {
+  /* Cambia el fondo y mueve el elemento hacia arriba en 10px al pasar el cursor sobre él */
+  margin-top: -10px;
+  background: var(--primary);
+}
+
+.service-item * {
+  /* Aplica una transición suave a todos los elementos hijos del service-item */
+  transition: .5s;
+}
+
+.service-item:hover * {
+  /* Cambia el color del texto de todos los elementos hijos al pasar el cursor sobre el service-item */
+  color: var(--light) !important;
+}
+
+
+/*** Categories & Courses ***/
+.category img,
+.course-item img {
+  /* Agrega una transición suave de 0.5 segundos a las imágenes dentro de .category y .course-item */
+  transition: .5s;
+}
+
+.category a:hover img,
+.course-item:hover img {
+  /* Aumenta el tamaño de las imágenes en un 10% al pasar el cursor sobre los enlaces dentro de .category o sobre .course-item */
+  transform: scale(1.1);
+}
+
+
+/* Main Header Styles */
+.main-header {
+  /* Establece la posición relativa para posicionar elementos hijos */
+  position: relative;
+  /* Fondo con un gradiente sobre una imagen de fondo, centrado y sin repetición */
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), var(--background-image) center center no-repeat;
+  background-size: cover;
+  /* Color del texto blanco */
+  color: #fff;
+  /* Relleno en la parte superior e inferior y margen inferior */
+  padding: 100px 0;
+  margin-bottom: 50px;
+  /* Sombra para dar profundidad */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Alinea el texto al centro */
+  text-align: center;
+  /* Oculta el desbordamiento */
+  overflow: hidden;
+}
+
+.main-header::before {
+  /* Crea una capa oscura sobre el fondo */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Fondo oscuro con opacidad */
+  background: rgba(0, 0, 0, 0.3);
+  /* Coloca la capa detrás del contenido */
+  z-index: 1;
+}
+
+.main-header .container {
+  /* Asegura que el contenido esté por encima de la capa oscura */
+  position: relative;
+  z-index: 2;
+}
+
+.main-header h1 {
+  /* Tamaño de fuente grande y negrita */
+  font-size: 4rem;
+  font-weight: 700;
+  /* Espacio debajo del título */
+  margin-bottom: 20px;
+  /* Animación de entrada desde arriba */
+  animation: slideInDown 0.7s ease-in-out;
+  /* Espaciado entre letras y texto en mayúsculas */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /* Sombra del texto para mayor legibilidad */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.main-header .breadcrumb {
+  /* Fondo semitransparente y bordes redondeados */
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 50px;
+  /* Se muestra como bloque en línea y margen superior */
+  display: inline-block;
+  margin-top: 20px;
+  /* Fondo difuso detrás del elemento */
+  backdrop-filter: blur(10px);
+  /* Sombra para efecto flotante */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.main-header .breadcrumb-item {
+  /* Muestra los elementos de la ruta de navegación en línea y define el tamaño de fuente */
+  display: inline;
+  font-size: 1.1rem;
+}
+
+.main-header .breadcrumb-item + .breadcrumb-item::before {
+  /* Añade un separador entre los elementos de la ruta de navegación */
+  content: '>';
+  color: #fff;
+  padding: 0 10px;
+}
+
+.main-header .breadcrumb-item a {
+  /* Color blanco para los enlaces y transición para el cambio de color */
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.main-header .breadcrumb-item a:hover {
+  /* Color primario en el hover de los enlaces */
+  color: var(--primary-color);
+}
+
+.main-header .breadcrumb-item.active {
+  /* Color primario y negrita para el elemento activo de la ruta de navegación */
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  /* Ajusta el tamaño del título y la fuente de los elementos de la ruta de navegación en pantallas pequeñas */
+  .main-header h1 {
+      font-size: 2.8rem;
+  }
+
+  .main-header .breadcrumb-item {
+      font-size: 0.95rem;
+  }
+}
+
+@keyframes slideInDown {
+  /* Animación para deslizar el elemento desde arriba */
+  0% {
+      opacity: 0;
+      transform: translateY(-100%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  /* Animación para desvanecer el elemento */
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.wow {
+  /* Oculta el elemento con la clase wow por defecto */
+  visibility: hidden;
+}
+
+.wow.fadeIn {
+  /* Aplicación de la animación de desvanecimiento */
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  visibility: visible;
+}
+
+.wow.slideInDown {
+  /* Aplicación de la animación de deslizamiento desde arriba */
+  animation-name: slideInDown;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  visibility: visible;
+}
+/* Footer Styles */
+footer {
+  /* Posiciona el pie de página y asegura que ocupe todo el ancho disponible */
+  position: relative;
+  width: 100%;
+  height: auto;
+  /* Relleno superior para crear espacio dentro del pie de página */
+  padding-top: 80px;
+  /* Color de fondo del pie de página */
+  background-color: #2C7180;
+}
+
+.footer-container {
+  /* Establece el ancho máximo y centra el contenido en la página */
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  /* Relleno horizontal */
+  padding: 0 12px;
+}
+
+.footer-wrapper {
+  /* Disposición flexible de los widgets dentro del pie de página */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.footer-widget {
+  /* Define el ancho y los márgenes de los widgets del pie de página */
+  width: calc(20% - 30px);
+  margin: 0 15px 50px;
+  padding: 0 12px;
+}
+
+.footer-widget:nth-child(1) {
+  /* Ajusta el ancho y margen del primer widget */
+  width: calc(40% - 50px);
+  margin-right: 15px;
+}
+
+.footer-logo {
+  /* Espacio inferior y alineación vertical del logotipo */
+  margin-bottom: 30px;
+  vertical-align: middle;
+}
+
+.footer-desc {
+  /* Espacio inferior, tamaño de fuente y altura de línea para la descripción del pie de página */
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer-socials {
+  /* Disposición flexible para los íconos sociales */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer-socials li {
+  /* Elimina los puntos de lista */
+  list-style: none;
+}
+
+.footer-socials li a {
+  /* Tamaño, margen, color y estilo de los íconos sociales */
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  color: #ffffff;
+  background-color: #33c1cf;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Transición suave para el cambio de color de fondo */
+  transition: all 0.3s ease-out;
+}
+
+.footer-socials li a:hover {
+  /* Color de fondo de los íconos sociales en el hover */
+  background-color: #037ef3;
+}
+
+.footer-widget h6 {
+  /* Color, margen, tamaño de fuente y peso de fuente para los encabezados de los widgets */
+  color: #ffffff;
+  margin: 10px 0 35px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footer-links li {
+  /* Elimina los puntos de lista */
+  list-style: none;
+}
+
+.footer-links li a {
+  /* Color, tamaño de fuente y estilo de los enlaces en el pie de página */
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: capitalize;
+  line-height: 32px;
+  /* Transición suave para el cambio de color */
+  transition: all 0.3s ease-out;
+}
+
+.footer-links li a:hover {
+  /* Color de los enlaces en el hover */
+  color: #000000;
+}
+
+.footer-copyright {
+  /* Espacio superior e inferior y borde superior para la sección de copyright */
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.footer-copyright p {
+  /* Color, tamaño de fuente, peso de fuente y alineación del texto en la sección de copyright */
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.footer-copyright p a {
+  /* Estilo de los enlaces en la sección de copyright */
+  color: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  /* Transición suave para el cambio de color */
+  transition: all 0.3s ease-out;
+}
+
+.footer-copyright p a:hover {
+  /* Color de los enlaces en el hover */
+  color: #000000;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+  /* Ajusta el ancho máximo y el ancho de los widgets para pantallas más pequeñas */
+  .footer-container {
+      max-width: 960px;
+  }
+
+  .footer-widget,
+  .footer-widget:nth-child(1) {
+      width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajusta el ancho máximo y el ancho de los widgets para pantallas aún más pequeñas */
+  .footer-container {
+      max-width: 720px;
+  }
+
+  .footer-widget,
+  .footer-widget:nth-child(1) {
+      width: 100%;
+      margin: 0 10px 50px;
+  }
+}
+
+  /* Barra lateral redes sociales */
+
+/* Resetea márgenes, rellenos y establece el modelo de caja para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container-bar {
+  /* Ancho máximo de la barra y posición fija en el lado izquierdo de la pantalla */
+  width: 100%;
+  max-width: 50px;
+  position: fixed;
+  left: 0;
+  top: 25%;
+  /* Asegura que la barra esté por encima de otros elementos */
+  z-index: 9999;
+}
+
+.container-bar a {
+  /* Estilo para los enlaces dentro de la barra lateral */
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  /* Transición suave para cambios en el estilo */
+  transition: all 500ms ease;
+  color: #fff;
+}
+
+.container-bar a:hover {
+  /* Fondo oscuro cuando se pasa el ratón sobre los enlaces */
+  background: #1c1c1c;
+}
+
+/* Estilos para iconos de redes sociales específicos */
+.container-bar .fa-facebook {
+  background: #3b5998;
+  border-radius: 0px 5px 0px 0px;
+}
+
+.container-bar .fa-instagram {
+  background: #E4405F;
+}
+
+.container-bar .fa-twitter {
+  background: #00acee;
+}
+
+.container-bar .fa-linkedin {
+  background: #0077B5;
+}
+
+.container-bar #title {
+  /* Estilo del título que aparece al pasar el ratón */
+  position: absolute;
+  background: #1c1c1c;
+  padding: 0px 8px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 15px;
+  top: 12px;
+  left: 0px;
+  /* Transición suave para la visibilidad del título */
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.container-bar a:hover #title {
+  /* Muestra el título al pasar el ratón sobre el enlace */
+  opacity: 1;
+  visibility: visible;
+  left: 64px;
+}
+
+.container-bar #title:after {
+  /* Triángulo indicador que apunta al enlace */
+  position: absolute;
+  content: '';
+  border-left: 7px solid transparent;
+  border-right: 6px solid #1c1c1c;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  right: 100%;
+  top: 8px;
+}
+
+#btn-social {
+  /* Oculta el botón de control */
+  display: none;
+}
+
+.fa-play {
+  /* Estilo del botón de reproducción que se usa para controlar la visibilidad */
+  cursor: pointer;
+  transition: all 0.4s;
+  font-size: 12px;
+  margin-bottom: 5px;
+  display: inline-block;
+  transform: rotate(180deg);
+  color: #49b0e6;
+}
+
+#btn-social:checked ~ .fa-play {
+  /* Cambia la rotación del botón cuando el botón de control está activado */
+  transform: rotate(0deg);
+}
+
+.icon-social {
+  /* Estilo para los iconos de redes sociales en la barra lateral */
+  transition: all 0.4s;
+  transform: translateX(0%);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+#btn-social:checked ~ .icon-social {
+  /* Desplaza los iconos hacia la izquierda y elimina la sombra cuando el botón de control está activado */
+  transform: translateX(-100%);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.0);
+}
+/* Sobre Nosotros */
+
+/* Contenedor principal para la sección, usa una cuadrícula para organizar el diseño */
+.main-container {
+  margin-left: 170px;
+  width: 80%;
+  height: 100%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 60px;
+  padding: 35px 0;
+}
+
+/* Estilo general para la galería de imágenes y el contenido de texto */
+.image-gallery,
+.text-content {
+  width: 100%;
+}
+
+/* Contenedor para las filas de imágenes en la galería */
+.image-gallery .image-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+/* Estilo para cada caja de imagen en la galería */
+.image-gallery .image-row .image-box {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para las imágenes dentro de cada caja de imagen */
+.image-gallery .image-row .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  /* Transición suave para el efecto de zoom */
+  transition: 0.3s ease;
+}
+
+/* Efecto de zoom al pasar el ratón sobre la imagen */
+.image-gallery .image-row .image-box:hover img {
+  transform: scale(1.5);
+}
+
+/* Desplazamiento vertical de las cajas de imagen alternas */
+.image-gallery .image-row .image-box:nth-child(odd) {
+  transform: translateY(-20px);
+}
+
+.image-gallery .image-row .image-box:nth-child(even) {
+  transform: translateY(20px);
+}
+
+/* Estilo para las secciones de texto dentro del contenido de texto */
+.text-content .text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+/* Estilo para el encabezado de nivel 4 en la sección de texto */
+.text-content .text-section h4 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #d35400;
+}
+
+/* Estilo para el encabezado de nivel 2 en la sección de texto */
+.text-content .text-section h2 {
+  font-size: 40px;
+  color: #1e272e;
+}
+
+/* Estilo para los párrafos en la sección de texto */
+.text-content .text-section p {
+  font-size: 16px;
+  color: #343434;
+  line-height: 28px;
+  padding-bottom: 10px;
+}
+
+/* Estilo para los enlaces en la sección de texto */
+.text-content .text-section a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 13px 30px;
+  color: #fff;
+  background: #d35400;
+  border-radius: 8px;
+  user-select: none;
+}
+
+/* Media queries para ajustar el diseño en pantallas pequeñas */
+/* Media queries para ajustar el diseño en pantallas medianas */
+@media (max-width: 992px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+/* Media queries para ajustar el diseño en pantallas pequeñas */
+@media (max-width: 770px) {
+  .main-container {
+    margin-left: 0;
+    width: 100%;
+  }
+  .image-gallery .image-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .image-gallery .image-row .image-box {
+    height: 200px;
+  }
+  .text-content .text-section h4 {
+    font-size: 18px;
+  }
+  .text-content .text-section h2 {
+    font-size: 30px;
+  }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+ 
+  .image-gallery .image-row .image-box {
+    height: 150px;
+  }
+  .text-content .text-section h2 {
+    font-size: 24px;
+  }
+}
+/* =================== Sección Creative Cards =================== */
+
+/* Estilo general para la sección de tarjetas creativas */
+.creative-cards {
+  padding: 120px 0; /* Espaciado superior e inferior */
+  position: relative; /* Permite posicionar elementos hijos absolutamente */
+}
+
+/* Contenedor principal dentro de la sección, con ancho máximo y centrado */
+.creative-cards .container {
+  max-width: 1320px;
+  width: 100%;
+  padding-right: .75rem;
+  padding-left: .75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Fila dentro del contenedor, usa flexbox para el diseño de columnas */
+.creative-cards .container .row {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */
+  gap: 1rem; /* Añade espacio entre columnas */
+}
+
+/* Estilo para cada columna de tarjeta, ajusta el ancho y el margen */
+.creative-cards .container .row .card-column {
+  flex: 1 1 calc(25% - 1rem); /* Ajuste del 25% menos espacio de margen */
+  text-align: center; /* Centra el texto dentro de la columna */
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Detalles de la tarjeta, incluyendo la transición y el fondo */
+.card-details {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  transition: .3s ease-in-out; /* Transición suave para cambios de estado */
+}
+
+/* Estilo para el fondo antes del contenido de la tarjeta */
+.card-details:before {
+  content: "";
+  width: 190px;
+  height: 380px;
+  background: #f7f6f2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) skew(-20deg, 0deg); /* Posiciona y rota el fondo */
+  z-index: -1; /* Envía el fondo detrás del contenido */
+  transition: .3s ease-in-out; /* Transición suave para cambios de estado */
+}
+
+/* Cambio de color del fondo al pasar el ratón sobre la tarjeta */
+.card-details:hover:before {
+  background-color: #A6CDDF;
+}
+
+/* Estilo para los íconos dentro de la tarjeta */
+.card-icons {
+  width: 140px;
+  height: 150px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo para el fondo del contenedor de íconos */
+.card-icons:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid;
+  width: 100%;
+  height: 100%;
+  transform: skew(-20deg, 0deg); /* Rota el fondo */
+  background: #fff;
+  border-color: #419BAF;
+  transition: .3s ease-in-out; /* Transición suave para cambios de estado */
+}
+
+/* Cambio de color del fondo del ícono al pasar el ratón */
+.card-details:hover .card-icons:before {
+  background-color: #419BAF;
+}
+
+/* Estilo para las imágenes dentro de los íconos de la tarjeta */
+.card-icons img {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+/* Estilo para el encabezado de la tarjeta */
+.card-details h3 {
+  margin-bottom: 15px;
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+/* Estilo para los enlaces en el encabezado de la tarjeta */
+.card-details h3 a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Estilo para el texto de la tarjeta */
+.card-details p {
+  font-size: 16px;
+  line-height: 30px;
+  color: #444;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+/* Estilo para el botón de leer más */
+.read-more-btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 100%;
+  margin: auto;
+  background: #fff;
+  transform: translateX(-10px);
+  opacity: 0;
+  visibility: hidden;
+  border-color: #419BAF;
+  transition: .3s ease-in-out; /* Transición suave para cambios de estado */
+  text-decoration: none;
+}
+
+/* Estilo para el ícono dentro del botón de leer más */
+.read-more-btn i {
+  color: #000;
+  font-size: 12px;
+}
+
+/* Cambio de posición y visibilidad del botón de leer más al pasar el ratón */
+.card-details:hover .read-more-btn {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ============= Responsive Ipad ==================== */
+/* Ajuste para pantallas de iPad */
+@media (max-width: 992px) {
+  .creative-cards .container .row .card-column {
+    flex: 1 1 calc(50% - 1rem); /* Ajuste del 50% menos espacio de margen */
+    margin-bottom: 40px;
+  }
+}
+
+/* ============= Responsive Iphone ==================== */
+/* Ajuste para pantallas de iPhone */
+@media (max-width: 480px) {
+  .creative-cards .container .row .card-column {
+    flex: 1 1 100%; /* Ajuste al 100% en pantallas pequeñas */
+    margin-bottom: 20px;
+  }
+
+  .card-details {
+    width: 100%;
+  }
+
+  .read-more-btn {
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* =================== Sección Services =================== */
+
+/* Estilo general para la sección de servicios */
+.services-section {
+  height: auto; /* Ajusta la altura para permitir contenido variable */
+  width: 100%;
+  display: grid;
+  place-items: center; /* Centra el contenido dentro de la sección */
+  padding: 2rem; /* Ajusta el padding para la sección */
+}
+
+/* Fila de servicios, usando flexbox para organizar las columnas */
+.services-row {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */
+  gap: 1rem; /* Añade espacio entre columnas */
+}
+
+/* Estilo para cada columna de servicio, ajusta el ancho y el margen */
+.services-column {
+  flex: 1 1 calc(33.33% - 1rem); /* Ajuste del 33.33% menos espacio de margen */
+  margin-bottom: 1rem;
+  padding: 0 1em;
+  text-align: center; /* Centra el texto dentro de la columna */
+}
+
+/* Estilo para cada tarjeta de servicio */
+.services-card {
+  width: 100%;
+  padding: 2em 1.5em; /* Padding interno de la tarjeta */
+  background: linear-gradient(#ffffff 50%, #419BAF 50%); /* Fondo degradado */
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12); /* Sombra de la tarjeta */
+  cursor: pointer; /* Cambia el cursor al pasar sobre la tarjeta */
+  transition: 0.5s; /* Transición suave para cambios de estado */
+}
+
+/* Estilo para el encabezado dentro de las tarjetas de servicio */
+.services-heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f194c; /* Color del texto del encabezado */
+  margin: 1em 0;
+}
+
+/* Estilo para el título dentro de las tarjetas de servicio */
+.services-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c; /* Color del texto del título */
+  margin: 1em 0;
+}
+
+/* Estilo para el texto dentro de las tarjetas de servicio */
+.services-card p {
+  color: #575a7b;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em; /* Espaciado entre letras */
+}
+
+/* Estilo para el contenedor de íconos dentro de las tarjetas de servicio */
+.services-icon-wrapper {
+  background-color: #33c1cf; /* Fondo del contenedor de íconos */
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%; /* Hace el contenedor circular */
+  display: grid;
+  place-items: center; /* Centra el ícono dentro del contenedor */
+  transition: 0.5s; /* Transición suave para cambios de estado */
+}
+
+/* Cambios de fondo y color al pasar el ratón sobre la tarjeta */
+.services-card:hover {
+  background-position: 0 100%;
+}
+
+/* Cambios de estilo del contenedor de íconos al pasar el ratón sobre la tarjeta */
+.services-card:hover .services-icon-wrapper {
+  background-color: #ffffff;
+  color: #33c1cf;
+}
+
+/* Cambios de color en el título y el texto al pasar el ratón sobre la tarjeta */
+.services-card:hover h3 {
+  color: #ffffff;
+}
+
+.services-card:hover p {
+  color: #f0f0f0;
+}
+
+/* ============= Responsive Ipad ==================== */
+/* Ajustes para pantallas de iPad (máximo 768px) */
+@media screen and (max-width: 768px) {
+  .services-column {
+    flex: 1 1 calc(50% - 1rem); /* Ajuste al 50% menos espacio de margen */
+  }
+}
+
+/* ============= Responsive Iphone ==================== */
+/* Ajustes para pantallas de iPhone (máximo 480px) */
+@media screen and (max-width: 480px) {
+  .services-column {
+    flex: 1 1 100%; /* Ajuste al 100% en pantallas pequeñas */
+  }
+}
+
+/** Whatsapp **/
+
+.btn-wsp{
+  position:fixed;
+  width:60px;
+  height:60px;
+  line-height: 63px;
+  bottom:25px;
+  right:25px;
+  background:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:35px;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+  z-index:100;
+  transition: all 300ms ease;
+}
+.btn-wsp:hover{
+  background: #20ba5a;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+  .btn-wsp{
+      width:63px;
+      height:63px;
+      line-height: 66px;
+   }
+}
+/** Final Whatsapp **/
+
+/** ¿Por qué elegir TN?**/
+  /* Contenedor de la fila de imágenes */
+  .image-row {
+    display: flex;
+    gap: 50px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+}
+
+/* Estilos para las imágenes */
+.image-row img {
+    width: 130px; /* Ancho fijo para todas las imágenes */
+    height: 130px; /* Alto fijo para todas las imágenes */
+    object-fit: cover; /* Mantener la proporción y recortar si es necesario */
+    border-radius: 8px; /* Bordes redondeados opcional */
+}
+

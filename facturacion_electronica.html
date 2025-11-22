@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Facturación Electrónica</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    <!-- Fuentes -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <!-- Iconos y favicon -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="icon" href="data:image/jpeg;base64,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" type="image/x-icon">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+        <link rel="stylesheet" href="css/lightbox.css">
+        <link rel="stylesheet" href="css/carrusel_index.css">
+        <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Scripts -->
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+        <style>
+            :root {
+                --background-image: url('https://gdx-group.com/wp-content/uploads/2023/07/GettyImages-1902034840-1-1024x683.jpg'); /* Imagen específica para esta página */
+            }
+        </style>
+    </head>
+    <!-- Whatsapp-->
+    <a href="https://wa.me/573143325647?text=Hola,%20estoy%20interesado%20en%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20planes%20celulares%20y%20art%C3%ADculos%20tecnol%C3%B3gicos%20de%20Claro.%20%C2%BFPodr%C3%ADas%20ayudarme?'" class="btn-wsp" target="_blank">
+      <i class="fa fa-whatsapp icono"></i>
+  </a>
+
+<body>
+     <!-- Cabecera -->
+    <div class="header">
+    <div class="container">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo-wrapper">
+                    <img src="img/Logo2.png" alt="Logo de TN1 Colombia" class="logo" id="logo">
+                </div>
+            </div>
+            <div id="main-nav" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html" class="scroll-top">INICIO</a></li>
+                    <li class="dropdown">
+                      <a href="sobre_nosotros.html" class="scroll-link" data-id="portfolio">SOBRE NOSOTROS</a>
+                      <ul class="dropdown-menu">
+                            <li><a href="politicas.html" class="scroll-link" data-id="service1">Politicas de Privacidad</a></li>
+                        </ul>
+                    </li>                    
+                    <li class="dropdown">
+                        <a href="#" class="scroll-link" data-id="portfolio">NUESTROS SERVICIOS</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="contact.html" class="scroll-link" data-id="service1">Servicio Contact center</a></li>
+                            <li><a href="seguimiento.html" class="scroll-link" data-id="service2">Servicio rastreo satelital GPS</a></li>
+                            <li><a href="seguridad_electronica.html" class="scroll-link" data-id="service3">Seguridad electrónica</a></li>
+                            <li><a href="telefonia.html" class="scroll-link" data-id="service3">Telefonía Ip</a></li>
+                            <li><a href="software.html" class="scroll-link" data-id="service3">Software</a></li>
+                            <li><a href="infraestructura.html" class="scroll-link" data-id="service3">Infraestructura</a></li>
+                            <li><a href="facturacion_electronica.html" class="scroll-link" data-id="service3">Facturación Electrónica</a></li>
+
+                        </ul>
+                    </li>                  
+                    <li><a href="index.html#blog" class="scroll-link" data-id="blog">BLOG</a></li>
+                    <li><a href="index.html#contact-us" class="scroll-link" data-id="contact-us">CONTACTANOS</a></li>
+                </ul>
+            </div>
+            </nav>
+        </div>
+    </div>
+    <!--finalcabecera-->
+    
+    
+    <!-- Main Header Start -->
+    <div class="container-fluid main-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Facturación Electrónica</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Nuestros servicios</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Facturación Electrónica</a></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Main Header End -->
+
+<!-- Contenido Principal -->
+<div class="main-container">
+  <div class="image-gallery">
+    <div class="image-row">
+        <div class="image-box">
+            <img src="https://gdx-group.com/wp-content/uploads/2024/07/pruebas-foto-gdx.webp" alt="">
+        </div>
+        <div class="image-box">
+            <img src="https://gdx-group.com/wp-content/uploads/2024/08/iStock-863497498-1024x683.webp" alt="">
+        </div>
+        <div class="image-box">
+          <img src="https://ekosnegocios.com/image/posts/April2024/cvWf6aklaWwVhEe26Erp.jpg" alt="">
+        </div>
+        <div class="image-box">
+          <img src="https://img.channelpartner.es/wp-content/uploads/2024/02/14171858/Factura-electronica-1611x1080.jpg.webp" alt="">
+        </div>
+    </div>
+  </div>
+  <!-- Sección de Texto -->
+  <div class="text-content">
+    <div class="text-section">
+      <h4>Bienvenido a</h4>
+      <h2>facturación electrónica</h2>
+      <p>La facturación electrónica es una factura digital con efectos legales. Según el Decreto 2242 de 2015, desde el 1 de enero de 2019, los grandes contribuyentes están obligados a emitir facturas electrónicas para mejorar la eficiencia, reducir costos y aumentar la transparencia fiscal.</p>
+    </div>
+  </div>
+</div>
+<!-- Modalidades de servicio -->
+
+<h3>Modalidades de servicio de contact center</h3>
+<section class="services-section">
+  <div class="services-row">
+  </div>
+  <div class="services-row">
+    <div class="services-column">
+      <div class="services-card">
+        <div class="services-icon-wrapper">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Seguridad</h3>
+        <p>
+          Seguridad de servidor AAA y Top OWASP        </p>
+      </div>
+    </div>
+    <div class="services-column">
+      <div class="services-card">
+        <div class="services-icon-wrapper">
+          <i class="fas fa-lock"></i>
+        </div>
+        <h3>Seguridad AAA</h3>
+        <p>
+          Contamos con seguridad categoría AAA para la información que cada cliente nos proporciona        </p>
+      </div>
+    </div>
+    <div class="services-column">
+      <div class="services-card">
+        <div class="services-icon-wrapper">
+          <i class="fas fa-certificate"></i>
+        </div>
+        <h3>Certificados por la DIAN</h3>
+        <p>
+          Somos proveedores certificados por la DIAN para brindar el servicio de facturación electrónica a empresas.        </p>
+      </div>
+    </div>
+    <div class="services-column">
+      <div class="services-card">
+        <div class="services-icon-wrapper">
+          <i class="fas fa-plug"></i>
+        </div>
+        <h3>Web Service</h3>
+        <p>
+          Nos integramos con su ERP</p>
+      </div>
+    </div>
+    <div class="services-column">
+      <div class="services-card">
+        <div class="services-icon-wrapper">
+          <i class="fas fa-exchange-alt"></i>
+        </div>
+        <h3>Integración Web</h3>
+        <p>
+          Integración sencilla y eficiente para empresas que no requieren un alto nivel de desarrollo contable </p>
+      </div>
+    </div>
+    <div class="services-column">
+      <div class="services-card">
+        <div class="services-icon-wrapper">
+          <i class="fas fa-desktop"></i>
+        </div>
+        <h3>Plataforma Web</h3>
+        <p>
+          Implementación manual para clientes pequeños que no cuentan con ERP..</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ¿Por qué elegir TN? -->
+
+<br><br><br>
+
+
+<!-- Sección de contacto -->
+<div id="contact-us">
+<div class="container">
+  <div class="row">
+      <div class="col-md-12">
+          <div class="section-heading">
+              <h4>Contáctanos</h4>
+              <div class="line-dec"></div>
+              <p>TN Colombia cuenta con un personal altamente calificado que desarrollará el mejor modelo de atención para su empresa.</p>
+              <div class="pop-button">
+                  <h4>Contactanos</h4>
+              </div>
+          </div>
+      </div>
+  </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+<!-- Somos el mejor aliado para asegurar -->
+<h3>Somos el mejor aliado para asegurar</h3>
+
+<section class="creative-cards style-one">
+  <div class="container">
+    <div class="row">
+      <div class="card-column">
+        <div class="card-details">
+          <div class="card-icons">
+            <img class="light-icon" src="img/candado.png" alt="icon" />
+          </div>
+          <h3><a>Seguridad en la información</a></h3>
+          <p>Aseguramos la privacidad y seguridad de la información de tus clientes.</p>
+        </div>
+      </div>
+      <div class="card-column">
+        <div class="card-details">
+          <div class="card-icons">
+            <img class="light-icon" src="img/bd.png" alt="icon" />
+          </div>
+          <h3><a>Gran infraestructura</a></h3>
+          <p>Infraestructura robusta para un servicio confiable y escalable.</p>
+        </div>
+      </div>
+      <div class="card-column">
+        <div class="card-details">
+          <div class="card-icons">
+            <img class="light-icon" src="img/exitoso.png" alt="icon" />
+          </div>
+          <h3><a>Fidelización de clientes</a></h3>
+          <p>Nos enfocamos en la satisfacción y lealtad del cliente.</p>
+        </div>
+      </div>
+      <div class="card-column">
+        <div class="card-details">
+          <div class="card-icons">
+            <img class="light-icon" src="img/dinero.png" alt="icon" />
+          </div>
+          <h3><a>Optimización de costos</a></h3>
+          <p>Eficiencia operativa que ayuda a minimizar costos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+     <!-- Footer -->
+     <footer>
+        <div class="footer-container">
+          <div class="footer-wrapper">
+            <div class="footer-widget">
+              <a href="index.html">
+                <img src="img/Logo2.png" class="footer-logo" />
+              </a>
+              
+              <ul class="footer-socials">
+                <li>
+                  <a href="https://www.facebook.com/tncolombiatech">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/TN_COLOMBIA">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/_tncolombia_/">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFdx7xZM2CuzwAAAZFte68g_Ufgk7XODna0Nt7q3OHD02rIRCc6qjL4Xlg47WzT8Rlt75HOJx1c9AgMc7CK1gQfD-8GiFqAac41DW-Xq0-Uen73CenXXQzbK99Kc3VboruVjcg=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Ftn-colombia-99086113b">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-widget">
+              <h6>Paginas</h6>
+              <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#contact-us">Contactanos</a></li>
+              </ul>
+            </div>
+            <div class="footer-widget">
+              <h6>Servicios</h6>
+              <ul class="footer-links">
+                <li><a href="contact.html">Contact center</a></li>
+                <li><a href="seguimiento.html">Rastreo digital</a></li>
+                <li><a href="seguridad_electronica.html">Seguridad electronica</a></li>
+                <li><a href="telefonia.html">Telefonia IP</a></li>
+                <li><a href="software.html">Software</a></li>
+                <li><a href="infraestructura.html">Infraestructura</a></li>
+                <li><a href="facturacion_electronica.html">facturacion electronica</a></li>
+
+
+              </ul>
+            </div>
+            <div class="footer-widget">
+              <h6>Ayuda y soporte</h6>
+              <ul class="footer-links">
+                <li><a href="#">Políticas De Privacidad</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <p></a> Todos los derechos reservados. | Creado por Camilo Sánchez. </p>
+
+        </div>
+    </div>
+</div>
+</div>
+</footer>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/carrusel.js" ></script>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.scroll-link').on('click', function(event) {
+                var href = $(this).attr('href');
+                if (href.startsWith('#')) {
+                    event.preventDefault();
+                    var sectionID = $(this).attr("data-id");
+                    scrollToID('#' + sectionID, 750);
+                }
+            });
+
+            function scrollToID(id, speed){
+                var offSet = 50;
+                var targetOffset = $(id).offset().top - offSet;
+                $('html,body').animate({scrollTop:targetOffset}, speed);
+            }
+        });
+    </script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('.header');
+            var logoWrapper = document.querySelector('.logo-wrapper');
+            
+            if (window.scrollY > 0) { // Cuando se hace scroll hacia abajo
+                header.classList.add('active'); // Agrega clase active al header si lo deseas
+                logoWrapper.innerHTML = '<img src="img/Logo1.png" alt="Logo de TN Colombia" class="logo">';
+            } else { // Cuando se está en la parte superior de la página
+                header.classList.remove('active'); // Remueve clase active si lo deseas
+                logoWrapper.innerHTML = '<img src="img/Logo2.png" alt="Logo de TN1 Colombia" class="logo">';
+            }
+        });
+    </script>
+    
+</body>
+</html>

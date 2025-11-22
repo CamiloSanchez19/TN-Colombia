@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Inicio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Fuentes -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+        <!-- Iconos y favicon -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="icon" href="data:image/jpeg;base64,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" type="image/x-icon">
+        
+        <!-- Hojas de estilo -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/lightbox.css">
+        <link rel="stylesheet" href="css/carrusel_index.css">
+        <link rel="stylesheet" href="css/estilos.css">
+
+        <!-- Scripts -->
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    </head>
+    <!-- Whatsapp-->
+    <a href="https://wa.me/573143325647?text=Hola,%20estoy%20interesado%20en%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20planes%20celulares%20y%20art%C3%ADculos%20tecnol%C3%B3gicos%20de%20Claro.%20%C2%BFPodr%C3%ADas%20ayudarme?'" class="btn-wsp" target="_blank">
+    <i class="fa fa-whatsapp icono"></i>
+    </a>
+    <body>
+        <!-- Cabecera -->
+        <div class="header">
+            <div class="container">
+                <nav class="navbar navbar-inverse" role="navigation">
+                    <div class="navbar-header">
+                        <!-- Botón de navegación para dispositivos móviles -->
+                        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- Logo -->
+                        <div class="logo-wrapper">
+                            <img src="img/Logo2.png" alt="Logo de TN1 Colombia" class="logo" id="logo">
+                        </div>
+                    </div>
+                    <!-- Menú de navegación -->
+                    <div id="main-nav" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html" class="scroll-top">INICIO</a></li>
+                            <li class="dropdown">
+                                <a href="sobre_nosotros.html" class="scroll-link" data-id="portfolio">SOBRE NOSOTROS</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="politicas.html" class="scroll-link" data-id="service1">Politicas de Privacidad</a></li>
+                                </ul>
+                            </li>                    
+                            <li class="dropdown">
+                                <a href="#" class="scroll-link" data-id="portfolio">NUESTROS SERVICIOS</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="contact.html" class="scroll-link" data-id="service1">Servicio Contact center</a></li>
+                                    <li><a href="seguimiento.html" class="scroll-link" data-id="service2">Servicio rastreo satelital GPS</a></li>
+                                    <li><a href="seguridad_electronica.html" class="scroll-link" data-id="service3">Seguridad electrónica</a></li>
+                                    <li><a href="telefonia.html" class="scroll-link" data-id="service3">Telefonía Ip</a></li>
+                                    <li><a href="software.html" class="scroll-link" data-id="service3">Software</a></li>
+                                    <li><a href="infraestructura.html" class="scroll-link" data-id="service3">Infraestructura</a></li>
+                                    <li><a href="facturacion_electronica.html" class="scroll-link" data-id="service3">Facturación Electrónica</a></li>
+                                </ul>
+                            </li>                  
+                            <li><a href="#" class="scroll-link" data-id="blog">BLOG</a></li>
+                            <li><a href="#" class="scroll-link" data-id="contact-us">CONTACTANOS</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Fin de la cabecera -->
+    
+        <!-- Carrusel -->
+        <div class="carousel">
+            <div class="list">
+                <div class="item">
+                    <img src="https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg">
+                    <div class="content">
+                        <div class="title">FACTURACION ELECTRONICA</div>
+                        <div class="des">
+                            Solicite asesoría gratuita para implementar de manera rápida y sencilla la facturación electrónica en su empresa.
+                        </div>
+                        <div class="buttons">
+                            <button>VER MAS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://images.pexels.com/photos/7681562/pexels-photo-7681562.jpeg">
+                    <div class="content">
+                        <div class="title">CONTACT CENTER</div>
+                        <div class="des">
+                            Somos su mejor aliado para impulsar su marca y aumentar las ventas de su compañía.
+                        </div>
+                        <div class="buttons">
+                            <button>VER MAS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg">
+                    <div class="content">
+                        <div class="title">SEGUIMIENTO</div>
+                        <div class="des">
+                            Mantenga bajo control su flota de vehículos, transporte de carga y personas a su cargo, con el mejor sistema de rastreo digital GPS del mercado en Colombia.
+                        </div>
+                        <div class="buttons">
+                            <button>VER MAS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://images.pexels.com/photos/6466141/pexels-photo-6466141.jpeg">
+                    <div class="content">
+                        <div class="title">INFRAESTRUCTURA</div>
+                        <div class="des">
+                            Brindamos el mejor servicio en diseño, suministro, instalación y gestión de proyectos para optimizar las operaciones de su empresa.
+                        </div>
+                        <div class="buttons">
+                            <button>VER MAS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Miniaturas del carrusel -->
+            <div class="thumbnail" style="background-color: transparent; border: none;">
+                <div class="item">
+                    <img src="https://images.pexels.com/photos/7681562/pexels-photo-7681562.jpeg">
+                    <div class="content">
+                        <div class="title">CONTACT CENTER</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg">
+                    <div class="content">
+                        <div class="title">FACTURACION ELECTRONICA</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg">
+                    <div class="content">
+                        <div class="title">SEGUIMIENTO</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://images.pexels.com/photos/6466141/pexels-photo-6466141.jpeg">
+                    <div class="content">
+                        <div class="title">SOPORTE</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Controles del carrusel -->
+            <div class="arrows">
+                <button id="prev">></button>
+                <button id="next">></button>
+            </div>
+            <div class="time"></div>
+        </div>
+        <!-- Fin del carrusel -->
+
+   <!-- Sección de servicios -->
+<section id="about" class="page-section">
+    <div class="container">
+        <div class="row">
+            <!-- Primer servicio -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="img/Item1.png" alt="Icono de Contact center">
+                    </div>
+                    <h4>Contact center</h4>
+                    <div class="line-dec"></div>
+                    <p>Nuestro servicio de contact center le ofrece a su empresa asesoría y acompañamiento para el cumplimiento de sus metas de mercadeo, comerciales y de servicio al cliente.</p>
+                    <div class="primary-blue-button">
+                        <a href="contact.html" class="scroll-link" data-id="portfolio">Continuar Leyendo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Segundo servicio -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="img/item2.png" alt="Icono de Seguimiento">
+                    </div>
+                    <h4>Seguimiento</h4>
+                    <div class="line-dec"></div>
+                    <p>Sofisticado software de rastreo satelital en vivo diseñado con la última tecnología del mercado para ofrecerle a usted y/o a su empresa el mejor sistema para mantener personas y/o objetos bajo control.</p>
+                    <div class="primary-blue-button">
+                        <a href="seguimiento.html" class="scroll-link" data-id="portfolio">Continuar Leyendo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tercer servicio -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="img/item3.png" alt="Icono de Seguridad electrónica">
+                    </div>
+                    <h4>Seguridad electrónica</h4>
+                    <div class="line-dec"></div>
+                    <p>Ofrecemos a su empresa servicios de video vigilancia, alarmas contra intrusos, detección de incendios, planos de calor, entre otros, que garantizan un control total y monitoreo electrónico.</p>
+                    <div class="primary-blue-button">
+                        <a href="seguridad_electronica.html" class="scroll-link" data-id="portfolio">Continuar Leyendo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Cuarto servicio -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="img/item4.png" alt="Icono de Telefonía IP">
+                    </div>
+                    <h4>Telefonía IP</h4>
+                    <div class="line-dec"></div>
+                    <p>Desarrollamos una plataforma colaborativa, segura y rentable, a través de la cual su empresa podrá optimizar en términos de costos y operaciones, las comunicaciones telefónicas a nivel interno y externo.</p>
+                    <div class="primary-blue-button">
+                        <a href="telefonia.html" class="scroll-link" data-id="portfolio">Continuar Leyendo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Barra social -->
+        <div class="container-bar">
+            <input type="checkbox" id="btn-social">
+            <label for="btn-social" class="fa fa-play"></label>
+            <div class="icon-social">
+                <a href="#" class="fa fa-facebook">
+                    <span id="title">Facebook</span>
+                </a>
+                <a href="#" class="fa fa-instagram">
+                    <span id="title">Instagram</span>
+                </a>
+                <a href="#" class="fa fa-twitter">
+                    <span id="title">Twitter</span>
+                </a>
+                <a href="#" class="fa fa-linkedin">
+                    <span id="title">LinkedIn</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Segunda sección de servicios -->
+        <section id="about" class="page-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Quinto servicio -->
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="service-item">
+                            <div class="icon">
+                                <img src="img/item5.png" alt="Icono de Software">
+                            </div>
+                            <h4>Software</h4>
+                            <div class="line-dec"></div>
+                            <p>Desarrollamos los sueños e ideas en soluciones de tecnología a la medida, que apoyan de manera eficiente el incremento de la productividad y eficiencia.</p>
+                            <div class="primary-blue-button">
+                                <a href="software.html" class="scroll-link" data-id="portfolio">Continuar Leyendo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sexto servicio -->
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="service-item">
+                            <div class="icon">
+                                <img src="img/item6.png" alt="Icono de Infraestructura">
+                            </div>
+                            <h4>Infraestructura</h4>
+                            <div class="line-dec"></div>
+                            <p>Somos expertos en diseñar e instalar redes de cableado estructurado, optimizando la comunicación de voz, datos y redes eléctricas de su empresa.</p>
+                            <div class="primary-blue-button">
+                                <a href="infraestructura.html" class="scroll-link" data-id="portfolio">Continuar Leyendo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Séptimo servicio -->
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="service-item">
+                            <div class="icon">
+                                <img src="img/item7.png" alt="Icono de Facturación electrónica">
+                            </div>
+                            <h4>Facturación electrónica</h4>
+                            <div class="line-dec"></div>
+                            <p>Somos un proveedor tecnológico donde podrás facturar de forma ágil y segura, cumpliendo con la normatividad vigente de la DIAN.</p>
+                            <div class="primary-blue-button">
+                                <a href="facturacion_electronica.html" class="scroll-link" data-id="portfolio">Continuar Leyendo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+
+                 <!-- Sección de testimonios -->
+<section id="testimonial">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div id="owl-testimonials" class="owl-carousel owl-theme">
+                    <!-- Testimonio 1 -->
+                    <div class="item">
+                        <div class="testimonials-item">
+                            <p>"Sobresalimos en el mercado porque aplicamos nuevas ideas, productos, conceptos y servicios en los proyectos que emprendemos, con el único fin de generar total satisfacción en nuestros clientes y colaboradores."</p>
+                        </div>
+                    </div>
+                    <!-- Testimonio 2 -->
+                    <div class="item">
+                        <div class="testimonials-item">
+                            <p>"Nos comprometemos con las metas de cada cliente, ofreciendo siempre una experiencia única en cada servicio prestado, herramientas tecnológicas de última generación y personal constantemente capacitado."</p>
+                        </div>
+                    </div>
+                    <!-- Testimonio 3 -->
+                    <div class="item">
+                        <div class="testimonials-item">
+                            <p>"Prometemos cumplir con las aspiraciones de nuestros clientes, proporcionando experiencias excepcionales en cada servicio, utilizando tecnología de vanguardia y un equipo continuamente formado."</p>
+                        </div>
+                    </div>
+                    <!-- Testimonio 4 -->
+                    <div class="item">
+                        <div class="testimonials-item">
+                            <p>"Nuestra misión es proporcionar soluciones adaptadas a las necesidades individuales de cada cliente, aprovechando herramientas tecnológicas avanzadas y un equipo profesional en constante formación."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de blog -->
+<div class="tabs-content" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="wrapper">
+                <div class="col-md-4">
+                    <div class="section-heading">
+                        <h4>NUESTRAS PUBLICACIONES DE BLOG</h4>
+                        <div class="line-dec"></div>
+                        <p>Explora nuestras publicaciones de blog: destellos de sabiduría y frescura que iluminan tu mente con ideas innovadoras.</p>
+                        <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+                            <li><a href="#tab1" class="active">Telefonía IP de Colombia: Mantente conectado con VOIP</a></li>
+                            <li><a href="#tab2">El INPEC: telefonía IP y seguridad electrónica.</a></li>
+                            <li><a href="#tab3">Guía para escoger el mejor proveedor de rastreo satelital GPS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <section id="first-tab-group" class="tabgroup">
+                        <!-- Primer tab -->
+                        <div id="tab1">
+                            <img src="https://datamercantil.com/wp-content/uploads/2024/09/Telefonia-ip.jpg" alt="Blog sobre Telefonía IP">
+                            <div class="text-content">
+                                <h4>Telefonía IP: Manténgase siempre en contacto con el resto del mundo con telefonía VOIP de Colombia</h4>
+                                <span><a href="#"> Soporte at</a> / / <a href="#">26 marzo, 2018</a></span>
+                                <p>La telefonía IP es un método innovador de mantenernos comunicados con nuestro entorno por medio de una central telefónica IP. Le permite contactar a quién necesita, en el momento que desee, y solo requiere de Internet y buen software por medios de teléfonos. Su propósito es suministrar oportunidades de manera segura a sus clientes, logrando que se comuniquen desde y hacia cualquier parte.</p>
+                            </div>
+                        </div>
+                        <!-- Segundo tab -->
+                        <div id="tab2">
+                            <img src="https://blog.movistar.com.co/wp-content/uploads/2024/05/Telefonia-IP.webp" alt="Blog sobre INPEC y telefonía IP">
+                            <div class="text-content">
+                                <h4>Un exitoso sistema de telefonía IP y seguridad electrónica: El caso del INPEC</h4>
+                                <span><a href="#"> Soporte at</a> / / <a href="#">6 octubre, 2017</a></span>
+                                <p>En el año 2008, el Instituto Nacional Penitenciario y Carcelario INPEC buscaba una solución integral para optimizar el sistema de comunicación, infraestructura y telefonía IP en los sistemas penitenciarios. En TN Colombia desarrollamos un completo sistema de seguridad y comunicaciones que contaba con la última tecnología hasta el momento y seguridad garantizada. Desde aquel año y hasta entonces, somos su proveedor directo en sistemas de telefonía IP.</p>
+                            </div>
+                        </div>
+                        <!-- Tercer tab -->
+                        <div id="tab3">
+                            <img src="https://www.deltatracking.com/wp-content/uploads/2020/11/2-Media-1024x576.jpg" alt="Blog sobre rastreo satelital GPS">
+                            <div class="text-content">
+                                <h4>Guía para escoger el mejor proveedor de rastreo satelital GPS</h4>
+                                <span><a href="#"> Soporte at</a> / / <a href="#">1 septiembre, 2017</a></span>
+                                <p>Piense en el software de rastreo satelital GPS como el trayecto de su viaje de manera virtual. Los vigilantes copilotos están mandados a recoger. Con un software de rastreo satelital GPS, usted podrá monitorear sus vehículos las 24 horas del día.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Sección de contacto -->
+<div id="contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h4>Contáctanos</h4>
+                    <div class="line-dec"></div>
+                    <p>Para recibir más información, déjanos tus datos y en menos de 24 horas nos comunicaremos contigo. No estamos contratando personal.</p>
+                    <div class="pop-button">
+                        <h4>Déjanos tu mensaje</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="pop">
+                    <span>✖</span>
+                    <form id="contact" action="#" method="post">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <input name="name" type="text" class="form-control" id="name" placeholder="Tu nombre..." pattern="[A-Za-z\s]+" title="Solo se permiten letras." minlength="2" maxlength="50" required>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <input name="email" type="email" class="form-control" id="email" placeholder="Tu correo..." minlength="8" maxlength="30" required>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <input name="tel" type="tel" class="form-control" id="tel" placeholder="Tu teléfono..." pattern="[0-9]{10}" title="Por favor, ingresa un número telefónico válido de 10 dígitos." required>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <select name="ciudad" class="form-control" id="ciudad" required>
+                                        <option value="" disabled selected>Selecciona tu ciudad...</option>
+                                        <option value="Bogotá">Bogotá</option>
+                                        <option value="Medellín">Medellín</option>
+                                        <option value="Cali">Cali</option>
+                                        <option value="Barranquilla">Barranquilla</option>
+                                        <option value="Cartagena">Cartagena</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <select name="servicio" class="form-control" id="servicio" required>
+                                        <option value="" disabled selected>Servicio de interés</option>
+                                        <option value="Facturación Electrónica">Facturación Electrónica</option>
+                                        <option value="Infraestructura">Infraestructura</option>
+                                        <option value="Telefonía IP">Telefonía IP</option>
+                                        <option value="Seguridad Electrónica">Seguridad Electrónica</option>
+                                        <option value="Rastreo Satelital GPS">Rastreo Satelital GPS</option>
+                                        <option value="Contact Center">Contact Center</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Tu mensaje..." required></textarea>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <button type="submit" id="form-submit" class="btn">Enviar mensaje</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mapa -->
+<div id="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15906.104002104546!2d-74.0471479!3d4.6782358!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a91838e452b%3A0xeb2f9125605f2220!2sTn%20Colombia!5e0!3m2!1ses!2sco!4v1713087232604!5m2!1ses!2sco" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+     <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-wrapper">
+            <div class="footer-widget">
+                <a href="index.html">
+                    <img src="img/Logo2.png" class="footer-logo" alt="Logo">
+                </a>
+                
+                <ul class="footer-socials">
+                    <li>
+                        <a href="https://www.facebook.com/tncolombiatech">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/TN_COLOMBIA">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/_tncolombia_/">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/tn-colombia-99086113b">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h6>Páginas</h6>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact-us">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h6>Servicios</h6>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Center</a></li>
+                    <li><a href="seguimiento.html">Rastreo Digital</a></li>
+                    <li><a href="seguridad_electronica.html">Seguridad Electrónica</a></li>
+                    <li><a href="telefonia.html">Telefonía IP</a></li>
+                    <li><a href="software.html">Software</a></li>
+                    <li><a href="infraestructura.html">Infraestructura</a></li>
+                    <li><a href="facturacion_electronica.html">Facturación Electrónica</a></li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h6>Ayuda y Soporte</h6>
+                <ul class="footer-links">
+                    <li><a href="#">Políticas de Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p></a> Todos los derechos reservados. | Creado por Camilo Sánchez. </p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/carrusel.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.scroll-link').on('click', function(event) {
+            var href = $(this).attr('href');
+            if (href.startsWith('#')) {
+                event.preventDefault();
+                var sectionID = $(this).attr("data-id");
+                scrollToID('#' + sectionID, 750);
+            }
+        });
+
+        function scrollToID(id, speed){
+            var offSet = 50;
+            var targetOffset = $(id).offset().top - offSet;
+            $('html,body').animate({scrollTop:targetOffset}, speed);
+        }
+    });
+</script>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var header = document.querySelector('.header');
+        var logoWrapper = document.querySelector('.logo-wrapper');
+        
+        if (window.scrollY > 0) { // Cuando se hace scroll hacia abajo
+            header.classList.add('active'); // Agrega clase active al header si lo deseas
+            logoWrapper.innerHTML = '<img src="img/Logo1.png" alt="Logo de TN Colombia" class="logo">';
+        } else { // Cuando se está en la parte superior de la página
+            header.classList.remove('active'); // Remueve clase active si lo deseas
+            logoWrapper.innerHTML = '<img src="img/Logo2.png" alt="Logo de TN Colombia" class="logo">';
+        }
+    });
+</script>
+    </body>
+</html>
